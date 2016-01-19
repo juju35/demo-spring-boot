@@ -41,7 +41,7 @@ public class Swagger2MarkupTest {
         this.mockMvc.perform(get("/v2/api-docs")
                 .accept(MediaType.APPLICATION_JSON))
                 .andDo(Swagger2MarkupResultHandler
-                        .outputDirectory("src/docs/asciidoc/generated").build())
+                        .outputDirectory("target/docs/asciidoc").build())
                 .andExpect(status().isOk());
     }
 
@@ -49,7 +49,7 @@ public class Swagger2MarkupTest {
     public void convertSwaggerToMarkdown() throws Exception {
         this.mockMvc.perform(get("/v2/api-docs")
                 .accept(MediaType.APPLICATION_JSON))
-                .andDo(Swagger2MarkupResultHandler.outputDirectory("src/docs/markdown/generated")
+                .andDo(Swagger2MarkupResultHandler.outputDirectory("target/docs/markdown")
                         .withMarkupLanguage(MarkupLanguage.MARKDOWN).build())
                 .andExpect(status().isOk());
     }
