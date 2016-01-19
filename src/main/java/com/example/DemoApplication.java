@@ -18,12 +18,12 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @EnableAdminServer
 public class DemoApplication {
 
+
     public static void main(String[] args) {
         new SpringApplicationBuilder()
                 .listeners(new ApplicationPidFileWriter())
                 .bannerMode(Banner.Mode.CONSOLE)
                 .sources(DemoApplication.class)
                 .run(args);
-
     }
 }
