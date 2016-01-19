@@ -14,7 +14,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/rest")
 public class CustomController {
 
-    private final Logger log = LoggerFactory.getLogger(this.getClass());
+    protected final Logger log;
+
+    public CustomController() {
+        log = LoggerFactory.getLogger(this.getClass());
+    }
 
     @RequestMapping(value = "/custom", method = RequestMethod.POST)
     public String custom() {
