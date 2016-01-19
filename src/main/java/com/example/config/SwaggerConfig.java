@@ -34,7 +34,7 @@ public class SwaggerConfig {
                 "Some custom description of API.",
                 "1.0",
                 "Terms of service",
-                "myeaddress@company.com",null,null);
+                "myeaddress@company.com","Administration","/admin");
         return apiInfo;
     }
 }
